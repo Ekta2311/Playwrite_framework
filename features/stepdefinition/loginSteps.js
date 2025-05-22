@@ -30,6 +30,10 @@ Given('I am on the login page', async function () {
 
          });
 
+
+
+
+
       Given('a login to Facebook application with {string} and {string}', async function (usernameParam, passwordParam) {
     console.log("Login to Facebook with scenario values: " + usernameParam + " and " + passwordParam);
 
@@ -44,4 +48,10 @@ Given('I am on the login page', async function () {
 });
 
 
-         
+           Given('I entered URL then clickn on child window',async function () {
+          
+            const FBPage = this.POManager.getFBLoginPage();
+           await FBPage.clickOnChildWindow();
+           await console.log("Clicked on child window");
+            // Add your code to handle the child window here
+         });
